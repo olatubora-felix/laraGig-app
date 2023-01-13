@@ -20,6 +20,7 @@ export const CustomInput = ({
                     name={name}
                     rows={rows}
                     placeholder={placeholder ? placeholder : ''}
+                    value={value}
                 ></textarea>
             )
             break

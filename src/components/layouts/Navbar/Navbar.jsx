@@ -35,14 +35,17 @@ export const Navbar = ({ user }) => {
                 ) : (
                     <>
                         <li>
-                            <NavLink to="/manage" class="hover:text-laravel">
-                                <i class="fa-solid fa-gear"></i> Manage Gigs
+                            <NavLink
+                                to="/manage"
+                                className="hover:text-laravel"
+                            >
+                                <i className="fa-solid fa-gear"></i> Manage Gigs
                             </NavLink>
                         </li>
                         <li>
                             <form>
                                 <button>
-                                    <i class="fa-solid fa-door-closed"></i>{' '}
+                                    <i className="fa-solid fa-door-closed"></i>{' '}
                                     Logout
                                 </button>
                             </form>

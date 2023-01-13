@@ -20,7 +20,7 @@ const manage = () => {
                     <table className="w-full table-auto rounded-sm">
                         <tbody>
                             {lists.map((list) => (
-                                <tr className="border-gray-300">
+                                <tr className="border-gray-300" key={list.id}>
                                     <td className="px-4 py-8 border-t border-b border-gray-300 text-lg">
                                         <Link to={`/show/${list.slug}`}>
                                             {list.title}
@@ -28,7 +28,7 @@ const manage = () => {
                                     </td>
                                     <td className="px-4 py-8 border-t border-b border-gray-300 text-lg">
                                         <Link
-                                            href="/show/edit/2"
+                                            to="/show/edit/2"
                                             className="text-blue-400 px-6 py-2 rounded-xl"
                                         >
                                             <i className="fa-solid fa-pen-to-square"></i>
