@@ -9,7 +9,7 @@ const Register = () => {
     return (
         <LandingLayout user={user}>
             <div className="mx-4">
-                <div className="bg-gray-50 border border-gray-200 p-10 rounded max-w-lg mx-auto mt-24">
+                <div className="bg-gray-50 border border-gray-200 p-10 rounded max-w-lg mx-auto lg:mt-24 mt-0">
                     <AuthHeading
                         captionTitle="Register"
                         captionBody="Create an account to post gigs"

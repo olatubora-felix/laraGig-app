@@ -8,5 +8,3 @@ export const routes = [
         name: 'Login',
     },
 ]
-
-const ROUTS = {}
