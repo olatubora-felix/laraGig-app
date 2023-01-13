@@ -6,28 +6,30 @@ export const JobDetail = ({ job }) => {
         <div className="mx-4">
             <div className="bg-gray-50 border border-gray-200 p-10 rounded">
                 <div className="flex flex-col items-center justify-center text-center">
-                    <img className="w-48 mr-6 mb-6" src={job.image} alt="" />
+                    <img className="w-48 " src={job.image} alt="" />
 
-                    <h3 className="text-2xl mb-2">{job.title}</h3>
-                    <div className="text-xl font-bold mb-4">{job.name}</div>
+                    <h3 className="lg:text-2xl text-base mb-2">{job.title}</h3>
+                    <div className="lg:text-xl text-sm font-bold mb-4">
+                        {job.name}
+                    </div>
                     <ul className="flex">
                         {job.tags &&
                             job.tags.map((tag) => (
-                                <li className="bg-black text-white rounded-xl px-3 py-1 mr-2">
+                                <li className="bg-black text-white rounded-xl px-2 text-[8px] lg:text-xs py-1 mr-2">
                                     <Link to={`#${tag}`}>{tag}</Link>
                                 </li>
                             ))}
                     </ul>
-                    <div className="text-lg my-4">
+                    <div className="lg:text-lg text-sm my-4">
                         <i className="fa-solid fa-location-dot"></i>{' '}
                         {job.location}
                     </div>
                     <div className="border border-gray-200 w-full mb-6"></div>
                     <div>
-                        <h3 className="text-3xl font-bold mb-4">
+                        <h3 className="lg:text-3xl text-xl font-bold mb-4">
                             Job Description
                         </h3>
-                        <div className="text-lg space-y-6">
+                        <div className="lg:text-lg text-sm space-y-6">
                             <p>{job.description}</p>
                             <p>{job.description}</p>
 

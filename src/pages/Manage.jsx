@@ -25,28 +25,28 @@ const manage = () => {
                         <tbody>
                             {lists.map((list) => (
                                 <tr className="border-gray-300" key={list.id}>
-                                    <td className="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                                    <td className="px-2 py-4 border-t border-b border-gray-300 lg:text-lg text-xs">
                                         <Link to={`/show/${list.slug}`}>
                                             {list.title}
                                         </Link>
                                     </td>
-                                    <td className="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                                    <td className="px-4 py-8 border-t border-b border-gray-300 lg:text-lg text-xs">
                                         <Link
                                             to="/show/edit/2"
-                                            className="text-blue-400 px-6 py-2 rounded-xl"
+                                            className="text-blue-400 px-6 py-2 rounded-xl flex items-center"
                                         >
                                             <i className="fa-solid fa-pen-to-square"></i>
                                             Edit
                                         </Link>
                                     </td>
-                                    <td className="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                                    <td className="px-4 py-8 border-t border-b border-gray-300 lg:text-lg text-xs">
                                         <button
-                                            className="text-red-600"
+                                            className="text-red-600 flex items-center"
                                             onClick={() =>
                                                 handleDelete(list.id)
                                             }
                                         >
-                                            <i className="fa-solid fa-trash-can"></i>
+                                            <i className="fa-solid fa-trash-can mr-2"></i>
                                             Delete
                                         </button>
                                     </td>
