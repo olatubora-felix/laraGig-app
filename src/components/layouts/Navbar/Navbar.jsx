@@ -8,9 +8,9 @@ export const Navbar = ({ user }) => {
     const current = location.pathname
 
     return (
-        <nav className="flex justify-between items-center mb-4">
-            <Link to="/">
-                <img className="w-24" src={Logo} alt="logo" />
+        <nav className="flex justify-between items-center mb-4 mx-auto container h-20 p-4">
+            <Link to="/" className="font-bold text-2xl">
+                Lara<span className="text-primary">Gigs</span>
             </Link>
             <ul className="flex space-x-6 mr-6 text-lg">
                 {!user ? (

@@ -11,14 +11,16 @@ export const JobItem = ({ list }) => {
                     alt={list.name}
                 />
                 <div>
-                    <h3 className="text-2xl">
+                    <h3 className="lg:text-2xl text-xl">
                         <Link to={`/show/${list.slug}`}>{list.title}</Link>
                     </h3>
-                    <div className="text-xl font-bold mb-4">{list.name}</div>
+                    <div className="lg:text-xl text-base font-bold mb-4">
+                        {list.name}
+                    </div>
                     <ul className="flex">
                         {list.tags &&
                             list.tags.map((tag) => (
-                                <li className="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
+                                <li className="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 lg:text-xs text-[8px]">
                                     <Link to={`/search/${tag}`}>{tag}</Link>
                                 </li>
                             ))}

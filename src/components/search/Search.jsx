@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Search = () => {
     return (
-        <form action="">
+        <form action="" className="mx-auto container">
             <div className="relative border-2 border-gray-100 m-4 rounded-lg">
                 <div className="absolute top-4 left-3">
                     <i className="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>
