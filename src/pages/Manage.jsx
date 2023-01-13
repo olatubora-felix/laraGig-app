@@ -6,6 +6,10 @@ import { lists } from '../constant/jobsLists'
 
 const manage = () => {
     const user = true
+    const handleDelete = (id) => {
+        lists.filter((list) => list.id !== id)
+        console.log('deleted', id)
+    }
     return (
         <LandingLayout user={user}>
             <Search />
@@ -36,12 +40,15 @@ const manage = () => {
                                         </Link>
                                     </td>
                                     <td className="px-4 py-8 border-t border-b border-gray-300 text-lg">
-                                        <form action="">
-                                            <button className="text-red-600">
-                                                <i className="fa-solid fa-trash-can"></i>
-                                                Delete
-                                            </button>
-                                        </form>
+                                        <button
+                                            className="text-red-600"
+                                            onClick={() =>
+                                                handleDelete(list.id)
+                                            }
+                                        >
+                                            <i className="fa-solid fa-trash-can"></i>
+                                            Delete
+                                        </button>
                                     </td>
                                 </tr>
                             ))}

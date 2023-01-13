@@ -20,7 +20,7 @@ const Register = () => {
                             label="Name"
                             type="text"
                             name="name"
-                            value="Felix"
+                            value=""
                             onChange={() => {}}
                         />
                         <CustomInput
