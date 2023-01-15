@@ -8,7 +8,7 @@ export const Navbar = ({ user }) => {
 
     return (
         <nav className="flex justify-between items-center mb-4 mx-auto container h-20 p-4">
-            <Link to="/" className="font-bold text-2xl">
+            <Link to="/" className="font-bold lg:text-2xl text-base">
                 Lara<span className="text-primary">Gigs</span>
             </Link>
             <ul className="flex space-x-6 mr-6 text-lg">
@@ -33,15 +33,16 @@ export const Navbar = ({ user }) => {
                     </>
                 ) : (
                     <>
-                        <li>
+                        <li className="lg:text-lg text-xs">
                             <NavLink
                                 to="/manage"
-                                className="hover:text-laravel"
+                                className="hover:text-primary"
                             >
-                                <i className="fa-solid fa-gear"></i> Manage Gigs
+                                <i className="fa-solid fa-gear "></i> Manage
+                                Gigs
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="lg:text-lg text-xs">
                             <form>
                                 <button>
                                     <i className="fa-solid fa-door-closed"></i>{' '}

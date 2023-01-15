@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "name": "Stark Industries",
+      "image": "https://res.cloudinary.com/mobinet/image/upload/v1673632015/spacefi/stark_qx1c73.png",
+      "title": "Full-Stack Engineer",
+      "location": "Yaba, Lagos",
+      "email": "stark@gmail.com",
+      "website": "https://stark.com",
+      "tags": [
+        "Nodejs",
+        "API",
+        "Expressjs",
+        "React"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consecteturadipisicing elit. Eligendi non reprehenderitfacilis architecto autem quam necessitatibus, odit quod, repellendus voluptate cum. Necessitatibus a id tenetur. error numquam at modi quaerat.",
+      "id": 2,
+      "slug": "full-stack-engineer",
+      "userId": 2
+    }
+  ]
+}

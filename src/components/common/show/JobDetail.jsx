@@ -14,8 +14,11 @@ export const JobDetail = ({ job }) => {
                     </div>
                     <ul className="flex">
                         {job.tags &&
-                            job.tags.map((tag) => (
-                                <li className="bg-black text-white rounded-xl px-2 text-[8px] lg:text-xs py-1 mr-2">
+                            job.tags.map((tag, i) => (
+                                <li
+                                    className="bg-black text-white rounded-xl px-2 text-[8px] lg:text-xs py-1 mr-2"
+                                    key={i}
+                                >
                                     <Link to={`#${tag}`}>{tag}</Link>
                                 </li>
                             ))}

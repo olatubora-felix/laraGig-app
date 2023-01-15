@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import { JobDetail } from '../components/common/show/JobDetail'
 import { LandingLayout } from '../components/layouts'
-import { Search } from '../components/search/Search'
+import { Loader } from '../components/UI'
 import { BackButton } from '../components/UI/BackButton'
-import { lists } from '../constant/jobsLists'
+import { fetchJob } from '../redux/jobs/jobService'
+import { getStatus, selectJob } from '../redux/jobs/jobSlice'
 
 const Show = () => {
     const Navigate = useNavigate()
-    const { slug } = useParams()
-    const job = lists.find((list) => list.slug === slug)
+    const { id } = useParams()
     const user = false
+    const dispatch = useDispatch()
+    const job = useSelector(selectJob)
+    const status = useSelector(getStatus)
 
+    useEffect(() => {
+        dispatch(fetchJob(id))
+    }, [id, dispatch])
     return (
         <LandingLayout user={user}>
-            <Search />
             <BackButton onClick={() => Navigate('/')}>Back</BackButton>
+            {status === 'loading' && <Loader text="Loading..." />}
             <JobDetail job={job} />
         </LandingLayout>
     )

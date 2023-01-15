@@ -7,10 +7,12 @@ import { Search } from '../components/search/Search'
 
 const Home = () => {
     const user = false
+
     return (
         <LandingLayout user={user}>
             <Hero />
             <Search />
+
             <section className="mx-auto container p-4 text-end">
                 <Link
                     to="/create"
